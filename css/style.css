@@ -1,0 +1,195 @@
+@import url("/css/reset.css");
+@import url("../css/projetos.css");
+:root{
+    --cor-branco: #F6F6F6;
+    --cor-black: #000000;
+    --cor-azul: aqua;
+    --cor-pink: #FF577F;
+    --cor-cinza:#B9B9B9;
+
+    --text-font: Do Hyeon;
+    --text-second: Lato;
+}
+body{
+    background-color: var(--cor-black);
+    color: var(--cor-branco);
+    position: relative;
+}
+body::before{
+    content: "";
+    background-image: url("../imagens/background.png");
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    opacity: 15%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    z-index: -1;
+}
+.cabecalho{
+    color: var(--cor-azul);
+    font-family: var(--text-font);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+    background: var(--cor-black);
+    padding-top: 1%;
+}
+.cabecalho__header{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    align-items: center;
+    margin: 3%;
+}
+.cabecalho__itens{
+    text-decoration: none;
+}
+.cabecalho__itens :hover{
+    text-decoration : underline 3px;
+}
+
+.cabecalho__itens img{
+    width: 24px;
+    height: 24px;
+}
+.cabecalho__itens a{
+    text-decoration: none;
+    color: var(--cor-pink);
+}
+
+/* /////////////////////////// conteiner ////////////////////////////// */
+
+.main{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.container{
+    width: 615px;
+    display: block;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+.container__main{
+    margin-left: 15%;
+}   
+.container__titulo{
+    font-family: var(--text-font);
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 56px;
+    letter-spacing: 0.09em;
+    text-align: left;
+}
+.style{
+    color: var(--cor-pink);
+}
+.container__text{
+    font-family: var(--text-second);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: left;
+}
+.container__botao{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+.container__botao__titulo{
+    font-family: var(--text-font);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: center;
+}
+.botao__link{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    width: 280px;
+    text-align: center;
+    border-radius: 16px;    
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--cor-branco);
+    font-family: var(--text-second);
+    align-items: center;
+    border:2px solid var(--cor-pink);
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+.botao__link:hover{
+    color: #FF577F;
+}
+.foto{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 30%;
+    max-height: 0%; 
+}
+
+/* //////////////////////////////footer ///////////////////////////// */
+.rodape{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    background: var(--cor-black);
+    padding: -10%;
+}
+.rodape__foto{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 30%;
+    max-height: 30%;
+    margin-top: 2%;
+}
+.rodape__text{
+    font-family: var(--text-second);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: left;
+    margin-bottom: 1%;
+    color: var(--cor-cinza);
+}
+.linha{
+    border-top: 1px solid var(--cor-pink);
+    box-sizing: border-box;
+}
+/* ////////////////////////////////// responsivo ///////////////////////////////////// */
+
+@media (max-width: 1024px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .cabecalho{
+    }
+    .main{
+        flex-direction: column-reverse;
+        justify-content: center;
+        width: auto;
+    }
+    .container.main{
+        width: auto;
+    }
+}
